@@ -26,19 +26,13 @@ public abstract class Dialog
 // Concrete Creator A
 public class WindowsDialog : Dialog
 {
-    public override IButton CreateButton()
-    {
-        return new WindowsButton();
-    }
+    public override IButton CreateButton() => new WindowsButton();
 }
 
 // Concrete Creator B
 public class WebDialog : Dialog
 {
-    public override IButton CreateButton()
-    {
-        return new WebButton();
-    }
+    public override IButton CreateButton() => new WebButton();
 }
 
 // Product

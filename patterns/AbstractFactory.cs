@@ -23,29 +23,17 @@ public interface GuiFactory
 // Concrete Factory A
 public class WinFactory : GuiFactory
 {
-    public IButton CreateButton()
-    {
-        return new WinButton();
-    }
+    public IButton CreateButton() => new WinButton();
 
-    public ICheckbox CreateCheckbox()
-    {
-        return new WinCheckbox();
-    }
+    public ICheckbox CreateCheckbox() => new WinCheckbox();
 }
 
 // Concrete Factory B
 public class MacFactory : GuiFactory
 {
-    public IButton CreateButton()
-    {
-        return new MacButton();
-    }
+    public IButton CreateButton() => new MacButton();
 
-    public ICheckbox CreateCheckbox()
-    {
-        return new MacCheckbox();
-    }
+    public ICheckbox CreateCheckbox() => new MacCheckbox();
 }
 
 // Abstract Product A
