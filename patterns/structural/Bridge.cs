@@ -8,6 +8,7 @@ remote = new AdvancedRemoteControl(radio);
 Console.WriteLine("\nTests with advanced remote control:");
 remote.TogglePower();
 
+// Abstraction
 public class RemoteControl(IDevice device)
 {
     protected IDevice Device => device;
@@ -46,6 +47,7 @@ public class RemoteControl(IDevice device)
     }
 }
 
+// Extended abstraction
 public class AdvancedRemoteControl(IDevice device) : RemoteControl(device)
 {
     public void Mute()
@@ -54,6 +56,7 @@ public class AdvancedRemoteControl(IDevice device) : RemoteControl(device)
     }
 }
 
+// Implementation
 public interface IDevice
 {
     bool IsEnabled();
@@ -71,6 +74,7 @@ public interface IDevice
     void SetChannel(int channel);
 }
 
+// Concrete implementation A
 public class Tv : IDevice
 {
     private bool _on = false;
@@ -92,6 +96,7 @@ public class Tv : IDevice
     public void SetChannel(int channel) => this._channel = channel;
 }
 
+// Concrete implementation B
 public class Radio : IDevice
 {
     private bool _on = false;
